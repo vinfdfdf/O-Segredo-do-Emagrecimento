@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Segredo do Emagrecimento Revelado - MilionárioBR</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
+            100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Header */
+        header {
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 0 0 30px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #ffd700;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            background: 
+                linear-gradient(rgba(26, 26, 46, 0.7), rgba(15, 15, 35, 0.8)),
+                url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjMWExYTJlIi8+Cjwvcm9sZT4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPgo8L3N2Zz4=') center/cover;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 0 0 50px 50px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            animation: fadeInUp 1s ease;
+            background: linear-gradient(45deg, #ffd700, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.3s both;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #1a1a2e;
+            padding: 25px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.6s both;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 215, 0, 0.6);
+            animation: glow 2s infinite;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, #2a2a3e 0%, #1e1e2e 100%);
+            padding: 80px 0;
+            border-radius: 50px;
+            margin: 50px 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.8rem;
+            color: #ffd700;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #e0e0e0;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            border: 3px solid rgba(255, 215, 0, 0.3);
+        }
+
+        /* Single CTA Section */
+        .single-cta {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 50px;
+            margin: 50px 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .single-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 70% 60%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .single-cta h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #ffd700;
+        }
+
+        .single-cta p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+        }
+
+        .price-highlight {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #ffd700;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        .main-cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #1a1a2e;
+            padding: 30px 60px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: bold;
+            box-shadow: 0 20px 50px rgba(255, 215, 0, 0.4);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .main-cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(255, 215, 0, 0.6);
+            animation: glow 2s infinite;
+        }
+
+        /* Features List */
+        .features-list {
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: left;
+        }
+
+        .features-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+            font-size: 1.1rem;
+            color: #e0e0e0;
+        }
+
+        .features-list li:before {
+            content: '✓';
+            color: #ffd700;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, #2a2a3e 0%, #1e1e2e 100%);
+            padding: 80px 0;
+            border-radius: 50px;
+            margin: 50px 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #ffd700;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial {
+            background: rgba(26, 26, 46, 0.8);
+            padding: 30px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid #ffd700;
+            object-fit: cover;
+        }
+
+        .testimonial h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .testimonial p {
+            color: #e0e0e0;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            padding: 50px 0;
+            border-radius: 50px 50px 0 0;
+            margin-top: 50px;
+            border-top: 2px solid #ffd700;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .single-cta h2 {
+                font-size: 2.2rem;
+            }
+            
+            .price-highlight {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Scroll Animation */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">MilionárioBR</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>O Segredo do Emagrecimento Revelado</h1>
+            <p>Descubra o método que já transformou milhares de vidas</p>
+            <a href="#cta" class="cta-button">Quero Descobrir o Segredo</a>
+        </div>
+    </section>
+
+    <section class="about scroll-animate">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Por que 97% das Dietas Falham?</h2>
+                    <p>Depois de anos estudando nutrição e metabolismo, descobri o verdadeiro segredo que as indústrias não querem que você saiba.</p>
+                    <p>Não é sobre contar calorias, não é sobre exercícios extremos. É sobre um método simples que reativa seu metabolismo naturalmente.</p>
+                    <p>Mais de 10.000 pessoas já transformaram suas vidas com essa descoberta revolucionária.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=400&fit=crop" alt="Transformação corporal">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single-cta scroll-animate" id="cta">
+        <div class="container">
+            <h2>Transforme Sua Vida Agora</h2>
+            <p>Acesso completo ao método revolucionário que mudará sua relação com o emagrecimento</p>
+            
+            <div class="price-highlight">R$ 17,00</div>
+            
+            <div class="features-list">
+                <ul>
+                    <li>Acesso ao método completo de emagrecimento</li>
+                    <li>Guia alimentar exclusivo e detalhado</li>
+                    <li>Lista de compras otimizada</li>
+                    <li>Receitas exclusivas e práticas</li>
+                    <li>Plano de treinos em casa</li>
+                </ul>
+            </div>
+
+            <button class="main-cta-button" onclick="window.open('https://pay.cakto.com.br/3iwkuhn_418075', '_blank')">
+                Começar Minha Transformação
+            </button>
+        </div>
+    </section>
+
+    <section class="testimonials scroll-animate">
+        <div class="container">
+            <h2>Resultados Reais</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <img src="https://images.unsplash.com/photo-1614289371518-722f2615943d?w=100&h=100&fit=crop&crop=face" alt="Maria Silva">
+                    <h3>Maria Silva</h3>
+                    <p>"Perdi 15kg em 3 meses seguindo este método incrível. Nunca me senti tão bem!"</p>
+                </div>
+                <div class="testimonial">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="João Santos">
+                    <h3>João Santos</h3>
+                    <p>"Finalmente encontrei algo que funciona de verdade. Recomendo para todos!"</p>
+                </div>
+                <div class="testimonial">
+                    <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=100&h=100&fit=crop&crop=face" alt="Ana Costa">
+                    <h3>Ana Costa</h3>
+                    <p>"Mudou completamente minha relação com a comida. Método revolucionário!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Experiência</h3>
+                    <p>Especialistas em emagrecimento com mais de 10 anos de experiência ajudando pessoas a transformarem suas vidas através de métodos comprovados.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <a href="#" onclick="showModal('terms')">Termos de Uso</a>
+                    <a href="#" onclick="showModal('privacy')">Política de Privacidade</a>
+                    <a href="#" onclick="showModal('refund')">Política de Reembolso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para políticas -->
+    <div id="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #1a1a2e; padding: 40px; border-radius: 20px; max-width: 600px; max-height: 80vh; overflow-y: auto; border: 2px solid #ffd700; color: #e0e0e0;">
+            <div id="modal-content"></div>
+            <button onclick="closeModal()" style="margin-top: 20px; padding: 10px 20px; background: #ffd700; color: #1a1a2e; border: none; border-radius: 10px; cursor: pointer; font-weight: bold;">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        // Definir a imagem de fundo da hero usando JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Você pode substituir esta URL pela sua imagem
+            const heroSection = document.querySelector('.hero');
+            const imageUrl = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjMWExYTJlIi8+Cjwvcm9sZT4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPgo8L3N2Zz4=';
+            
+            // Para usar sua própria imagem, substitua a linha acima por:
+            // const imageUrl = 'URL_DA_SUA_IMAGEM_AQUI';
+            
+            heroSection.style.backgroundImage = `
+                linear-gradient(rgba(26, 26, 46, 0.7), rgba(15, 15, 35, 0.8)),
+                url('${imageUrl}')
+            `;
+        });
+
+        // Animação de scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.scroll-animate');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animate');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Executar uma vez no carregamento
+
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Funções do modal
+        function showModal(type) {
+            const modal = document.getElementById('modal');
+            const content = document.getElementById('modal-content');
+            
+            let modalContent = '';
+            
+            switch(type) {
+                case 'terms':
+                    modalContent = `
+                        <h2 style="color: #ffd700; margin-bottom: 20px;">Termos de Uso</h2>
+                        <p>Ao utilizar nossos serviços, você concorda com os seguintes termos:</p>
+                        <ul style="margin: 20px 0; padding-left: 20px;">
+                            <li>O conteúdo é destinado para maiores de 18 anos</li>
+                            <li>Os resultados podem variar de pessoa para pessoa</li>
+                            <li>É recomendado consultar um médico antes de iniciar qualquer programa</li>
+                            <li>O uso do material é de responsabilidade do usuário</li>
+                        </ul>
+                    `;
+                    break;
+                case 'privacy':
+                    modalContent = `
+                        <h2 style="color: #ffd700; margin-bottom: 20px;">Política de Privacidade</h2>
+                        <p>Respeitamos sua privacidade e protegemos seus dados:</p>
+                        <ul style="margin: 20px 0; padding-left: 20px;">
+                            <li>Coletamos apenas informações necessárias</li>
+                            <li>Não compartilhamos seus dados com terceiros</li>
+                            <li>Usamos criptografia para proteger informações</li>
+                            <li>Você pode solicitar exclusão dos dados a qualquer momento</li>
+                        </ul>
+                    `;
+                    break;
+                case 'refund':
+                    modalContent = `
+                        <h2 style="color: #ffd700; margin-bottom: 20px;">Política de Reembolso</h2>
+                        <p>Oferecemos garantia total de satisfação:</p>
+                        <ul style="margin: 20px 0; padding-left: 20px;">
+                            <li>30 dias de garantia incondicional</li>
+                            <li>Reembolso integral se não ficar satisfeito</li>
+                            <li>Processo simples via email ou WhatsApp</li>
+                            <li>Sem perguntas ou burocracias</li>
+                        </ul>
+                    `;
+                    break;
+            }
+            
+            content.innerHTML = modalContent;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Fechar modal ao clicar fora
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

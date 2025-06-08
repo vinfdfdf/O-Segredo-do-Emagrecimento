@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Vida Leve - Bem-vindo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #6dd5ed, #2193b0);
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .container {
+      max-width: 600px;
+      padding: 20px;
+      background: rgba(0,0,0,0.3);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 1.1em;
+      background: white;
+      color: #2193b0;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #f1f1f1;
+    }
+    .img-banner {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <img class="img-banner" src="https://source.unsplash.com/600x300/?healthy,lifestyle" alt="Vida saudável">
+  <h1>Vida Leve</h1>
+  <p>Transforme sua vida com saúde, bem-estar e equilíbrio.</p>
+  <button onclick="irParaLogin()">Começar</button>
+</div>
+
+<script>
+  function irParaLogin() {
+    window.location.href = 'login.html';
+  }
+</script>
+
+</body>
+</html>
+

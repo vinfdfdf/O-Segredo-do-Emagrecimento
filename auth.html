@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Vida Leve - Login / Cadastro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6dd5ed, #2193b0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+    }
+    .auth-box {
+      background: rgba(0,0,0,0.3);
+      padding: 30px;
+      border-radius: 15px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      border: none;
+      background: white;
+      color: #2193b0;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+<div class="auth-box">
+  <h2>Vida Leve</h2>
+
+  <input type="text" id="nome" placeholder="Nome (somente cadastro)">
+  <input type="email" id="email" placeholder="E-mail">
+  <input type="password" id="senha" placeholder="Senha">
+
+  <button onclick="cadastrar()">Cadastrar</button>
+  <button onclick="login()">Entrar</button>
+</div>
+
+<script>
+  function cadastrar() {
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+    if (!nome || !email || !senha) {
+      alert('Preencha todos os campos para cadastrar!');
+      return;
+    }
+
+    localStorage.setItem('nome', nome);
+    localStorage.setItem('email', email);
+    localStorage.setItem('senha', senha);
+
+    alert('Cadastro realizado com sucesso!');
+    window.location.href = 'index.html';
+  }
+
+  function login() {
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+    const emailSalvo = localStorage.getItem('email');
+    const senhaSalva = localStorage.getItem('senha');
+
+    if (email === emailSalvo && senha === senhaSalva) {
+      alert('Login realizado com sucesso!');
+      window.location.href = 'index.html';
+    } else {
+      alert('E-mail ou senha incorretos!');
+    }
+  }
+</script>
+
+</body>
+</html>

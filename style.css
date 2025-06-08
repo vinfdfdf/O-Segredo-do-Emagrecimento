@@ -1,0 +1,182 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f9f9f9, #e0f7fa);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  background: #00bfa5;
+  color: white;
+  padding: 30px 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.perfil img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.perfil span {
+  font-weight: bold;
+  color: white;
+}
+ 
+.perfil button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.perfil button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+
+
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.planos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.plano {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.plano:hover {
+  transform: scale(1.05);
+}
+
+.plano img {
+  width: 100%;
+  height: auto;
+}
+
+.plano h2 {
+  margin: 15px 0 10px;
+}
+
+.plano p {
+  padding: 0 10px;
+  color: #555;
+}
+
+.plano h3 {
+  margin: 10px 0;
+  color: #00bfa5;
+}
+
+.plano button {
+  background: #00bfa5;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 15px 0;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.plano button:hover {
+  background: #008e76;
+}
+
+.checkout {
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.checkout img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.pix {
+  margin-top: 20px;
+  background: #e0f7fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.voltar {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #00bfa5;
+  font-weight: bold;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#loginForm input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+#loginForm button {
+  background: #00bfa5;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: back 0.3s ease;
+}
+
+#loginForm button:hover {
+  background: #008e76;
+}
+
